@@ -1,0 +1,180 @@
+/*
+* Pure JavaScript and CSS Responsive Nav Starter
+* Author: Jessica Lynch
+* Author URI: https://jlyn.dev
+* Version: 1.0
+*/
+/* Variables */
+body {
+  min-height: 200vh;
+  /* `fixed` style added to header on scroll */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header#masthead {
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#masthead.fixed {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+
+#masthead.fixed a {
+  color: #fff;
+}
+
+#masthead__menu {
+  width: 100%;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+#masthead__menu a {
+  text-decoration: none;
+  color: #000;
+  padding: 0.5em 1em;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+}
+
+#masthead__menu a:last-child {
+  padding-bottom: 1em;
+}
+
+#masthead__menu a:hover {
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#masthead.collapsed #masthead__menu {
+  opacity: 0;
+  height: 0px;
+}
+
+#masthead.expanded #masthead__menu {
+  opacity: 1;
+}
+
+#masthead__wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1em 1em 0.5em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#masthead__branding {
+  font-size: 1.5em;
+}
+
+#masthead__branding__logo {
+  /*padding: 1em;
+  border: 1px solid #fff;*/
+  display: inline-block;
+}
+
+#masthead__button {
+  background: none;
+  border: none;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+}
+
+#masthead__button:focus {
+  outline: none;
+}
+
+#masthead__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#masthead__button span {
+  display: block;
+  width: 2em;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  background: #000;
+  z-index: 1;
+  -webkit-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  -o-transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+  transition: all 0.25s cubic-bezier(0.2, 0, 0.5, 1);
+}
+
+#masthead.expanded #masthead__button span:first-child {
+  -webkit-transform-origin: 0 0%;
+  -ms-transform-origin: 0 0%;
+  transform-origin: 0 0%;
+  -webkit-transform: rotate(45deg) translate(0, 0em);
+  -ms-transform: rotate(45deg) translate(0, 0em);
+  transform: rotate(45deg) translate(0, 0em);
+}
+
+#masthead.expanded #masthead__button span:last-child {
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotate(-45deg) translate(0, 0em);
+  -ms-transform: rotate(-45deg) translate(0, 0em);
+  transform: rotate(-45deg) translate(0, 0em);
+}
+
+#masthead.expanded #masthead__button span:nth-child(2) {
+  opacity: 0;
+}
+
+#masthead.fixed #masthead__button span {
+  background: #fff;
+}
+
+@media screen and (min-width: 781px) {
+  #masthead__button {
+    opacity: 0;
+  }
+
+  #masthead__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
